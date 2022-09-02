@@ -1,3 +1,21 @@
+@font-face {
+  font-family: plusJakartaSansExtraBold;
+  src: url(../assets/fonts/PlusJakartaSans-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: plusJakartaSansBold;
+  src: url(../assets/fonts/PlusJakartaSans-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: plusJakartaSansMedium;
+  src: url(../assets/fonts/PlusJakartaSans-Medium.ttf);
+  font-weight: 500;
+}
+
 :root {
   --color-scampi: hsl(234, 25%, 52%);
   --color-bunting: hsl(233, 54%, 16%);
@@ -5,8 +23,16 @@
   --color-violet-red: hsl(341, 92%, 62%);
   --color-carnation-pink: hsl(341, 100%, 83%);
   --color-pure-white: hsl(0, 0%, 100%);
+  --color-background: hsl(0, 0%, 95%);
   --gradient-persian-rose-persimmon: linear-gradient(to top, hsl(322, 87%, 55%), hsl(13, 100%, 64%));
   --gradient-persian-rose-dodger-blue: linear-gradient(to top, hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+  /* font: font-style font-variant font-weight font-size/line-height font-family */
+  --text-heading-xl: 56px/70px 'plusJakartaSansExtraBold';
+  --text-heading-lg: 40px/51px 'plusJakartaSansExtraBold';
+  --text-heading-md: 32px/40px 'plusJakartaSansExtraBold';
+  --text-heading-sm: 24px/29px 'plusJakartaSansExtraBold';
+  --text-body-md: 18px/28px 'plusJakartaSansMedium';
+  --text-body-sm: 16px/28px 'plusJakartaSansBold';
 }
 
 
@@ -25,6 +51,7 @@ a {
 }
 
 body {
+  background: var(--color-background);
   height: 100vh;
 }
 
