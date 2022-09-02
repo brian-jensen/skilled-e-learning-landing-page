@@ -1,0 +1,30 @@
+:root {
+  --color-scampi: hsl(234, 25%, 52%);
+  --color-bunting: hsl(233, 54%, 16%);
+  --color-waterloo: hsl(232, 10%, 56%);
+  --color-violet-red: hsl(341, 92%, 62%);
+  --color-carnation-pink: hsl(341, 100%, 83%);
+  --color-pure-white: hsl(0, 0%, 100%);
+  --gradient-persian-rose-persimmon: linear-gradient(to top, hsl(322, 87%, 55%), hsl(13, 100%, 64%));
+  --gradient-persian-rose-dodger-blue: linear-gradient(to top, hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+}
+
