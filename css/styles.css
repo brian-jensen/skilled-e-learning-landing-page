@@ -64,9 +64,16 @@ a:active {
   color: inherit;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
   background: var(--color-background);
   height: 100vh;
+}
+
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 main {
@@ -79,6 +86,9 @@ main,
   background-color: var(--color-pure-white);
   padding: 16px;
 }
+
+
+
 
 button {
   border: none;
@@ -117,7 +127,8 @@ header h3 {
   font: var(--text-heading-sm)
 }
 
-header button:hover {
+header button:hover,
+header button:active {
   background: var(--color-scampi);
 }
 
@@ -136,10 +147,10 @@ header button:hover {
   background: var(--gradient-persian-rose-persimmon);
 }
 
-.hero-text button:hover {
+.hero-text button:hover,
+.hero-text button:active {
   background: var(--gradient-persian-rose-persimmon-hover);
 }
-
 
 .hero-img-container {
   background-color: var(--color-pure-white);
@@ -148,6 +159,10 @@ header button:hover {
 
 .mobile-hero-img {
   max-width: 100%;
+}
+
+.tablet-hero-img {
+  display: none;
 }
 
 main {
@@ -196,7 +211,8 @@ a.courses-card-link {
   color: var(--color-violet-red);
 }
 
-a.courses-card-link:hover {
+a.courses-card-link:hover,
+a.courses-card-link:active {
   color: var(--color-carnation-pink);
 }
 
@@ -220,4 +236,71 @@ footer button {
 footer button:hover,
 footer button:active {
   background: var(--gradient-persian-rose-dodger-blue-hover);
+}
+
+@media (min-width: 768px) {
+
+  header,
+  main,
+  .hero-text {
+    padding: 24px 40px;
+  }
+
+  header h3 {
+    font: var(--text-heading-md-mobile);
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-pure-white);
+    padding-top: 50px;
+    padding-bottom: 115px;
+  }
+
+  .hero-text {
+    flex-basis: 63%;
+  }
+
+  .mobile-hero-img {
+    display: none;
+  }
+
+  .tablet-hero-img {
+    position: absolute;
+    clip-path: inset(0 310px 0 0);
+    display: block;
+    right: -310px;
+    top: -100px;
+    width: 710px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  main > * {
+    flex-basis: calc(50% - 6px);
+    min-height: 260px;
+  }
+
+  main > .courses-heading-container {
+    min-height: 275px;
+    padding-top: 45px;
+    align-self: flex-end;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .tablet-hero-img {
+    display: none;
+  }
+
+  main > * {
+    flex-basis: calc(33.3333% - 30px);
+  }
+
 }
