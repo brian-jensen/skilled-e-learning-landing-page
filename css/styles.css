@@ -25,16 +25,21 @@
   --color-pure-white: hsl(0, 0%, 100%);
   --color-background: hsl(0, 0%, 95%);
   --gradient-persian-rose-persimmon: linear-gradient(to top, hsl(322, 87%, 55%), hsl(13, 100%, 64%));
-  --gradient-persian-rose-dodger-blue: linear-gradient(to top, hsl(237, 100%, 64%), hsl(322, 87%, 55%));
-  /* font: font-style font-variant font-weight font-size/line-height font-family */
+  --gradient-persian-rose-persimmon-hover: linear-gradient(to top, hsl(322, 88%, 78%), hsl(13, 100%, 82%));
+  --gradient-persian-rose-dodger-blue: linear-gradient(to bottom, hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+  --gradient-persian-rose-dodger-blue-hover: linear-gradient(to bottom, hsl(265, 71%, 78%), hsl(322, 88%, 78%));
+  --gradient-pure-white-titan-white: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(236, 100%, 97%));
   --text-heading-xl: 56px/70px 'plusJakartaSansExtraBold';
   --text-heading-lg: 40px/51px 'plusJakartaSansExtraBold';
   --text-heading-md: 32px/40px 'plusJakartaSansExtraBold';
-  --text-heading-sm: 24px/29px 'plusJakartaSansExtraBold';
-  --text-body-md: 18px/28px 'plusJakartaSansMedium';
+  --text-heading-md-mobile: 28px/32px 'plusJakartaSansExtraBold';
+  --text-heading-sm: 24px/32px 'plusJakartaSansExtraBold';
+  --text-heading-xs: 20px/24px 'plusJakartaSansExtraBold';
+  --text-body-md: 18px/28px 'plusJakartaSansBold';
+  --text-body-md-thin: 18px/28px 'plusJakartaSansMedium';
   --text-body-sm: 16px/28px 'plusJakartaSansBold';
+  --text-body-sm-thin: 16px/26px 'plusJakartaSansMedium';
 }
-
 
 * {
   box-sizing: border-box;
@@ -47,7 +52,16 @@ ul {
 }
 
 a {
+  outline: none;
+  border: none;
   text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
 }
 
 body {
@@ -55,3 +69,155 @@ body {
   height: 100vh;
 }
 
+main {
+  background-color: var(--color-pure-white);
+}
+
+header,
+main,
+.hero-text {
+  background-color: var(--color-pure-white);
+  padding: 16px;
+}
+
+button {
+  border: none;
+  color: var(--color-pure-white);
+  font: var(--text-body-sm);
+  cursor: pointer;
+}
+
+.button-sm {
+  width: 140px;
+  height: 48px;
+  border-radius: 28px;
+}
+
+.button-lg {
+  width: 167px;
+  height: 56px;
+  border-radius: 31.5px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bunting {
+  color: var(--color-bunting);
+}
+
+.bunting-bg {
+  background-color: var(--color-bunting);
+}
+
+header h3 {
+  font: var(--text-heading-sm)
+}
+
+header button:hover {
+  background: var(--color-scampi);
+}
+
+.hero-text h1 {
+  margin-top: 0;
+  font: var(--text-heading-lg);
+}
+
+.text-default {
+  font: var(--text-body-sm-thin);
+  color: var(--color-waterloo);
+}
+
+.hero-text button {
+  margin-top: 25px;
+  background: var(--gradient-persian-rose-persimmon);
+}
+
+.hero-text button:hover {
+  background: var(--gradient-persian-rose-persimmon-hover);
+}
+
+
+.hero-img-container {
+  background-color: var(--color-pure-white);
+  padding-top: 10px;
+}
+
+.mobile-hero-img {
+  max-width: 100%;
+}
+
+main {
+  padding-top: 0;
+  padding-bottom: 80px;
+  background: var(--gradient-pure-white-titan-white);
+}
+
+.courses-heading-container {
+  padding: 30px;
+  border-radius: 10px;
+  color: var(--color-pure-white);
+  background: var(--gradient-persian-rose-persimmon);
+}
+
+.courses-heading {
+  font: var(--text-heading-sm);
+}
+
+.courses-card {
+  position: relative;
+  margin-top: 42px;
+  border-radius: 10px;
+  padding: 30px 28px;
+  background-color: var(--color-pure-white);
+}
+
+.courses-card-img {
+  position: absolute;
+  top: -25px;
+  left: 28px;
+  width: 56px;
+  height: 56px;
+}
+
+.courses-card-heading {
+  font: var(--text-heading-xs);
+  margin: 20px 0;
+}
+
+a.courses-card-link {
+  display: block;
+  margin-top: 20px;
+  width: 104px;
+  font: var(--text-body-md);
+  color: var(--color-violet-red);
+}
+
+a.courses-card-link:hover {
+  color: var(--color-carnation-pink);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 120px;
+  color: var(--color-pure-white);
+}
+
+footer h1 {
+  font: var(--text-heading-md-mobile);
+}
+
+footer button {
+  background: var(--gradient-persian-rose-dodger-blue);
+}
+
+footer button:hover,
+footer button:active {
+  background: var(--gradient-persian-rose-dodger-blue-hover);
+}
