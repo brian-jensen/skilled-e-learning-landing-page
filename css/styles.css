@@ -68,6 +68,8 @@ html, body {
   overflow-x: hidden;
   background: var(--color-background);
   height: 100vh;
+  /* iOS safari fix */
+  min-height: -webkit-fill-available;
 }
 
 .container {
