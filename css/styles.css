@@ -115,6 +115,11 @@ header {
   align-items: center;
 }
 
+header button {
+  position: relative;
+  z-index: 1;
+}
+
 .bunting {
   color: var(--color-bunting);
 }
