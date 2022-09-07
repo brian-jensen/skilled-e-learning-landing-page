@@ -158,10 +158,13 @@ header button:active {
 }
 
 .mobile-hero-img {
-  max-width: 100%;
+  max-width: 375px;
+  display: block;
+  margin: 0 auto;
 }
 
-.tablet-hero-img {
+.tablet-hero-img,
+.desktop-hero-img {
   display: none;
 }
 
@@ -242,7 +245,8 @@ footer button:active {
 
   header,
   main,
-  .hero-text {
+  .hero-text,
+  footer {
     padding: 24px 40px;
   }
 
@@ -287,20 +291,127 @@ footer button:active {
   }
 
   main > .courses-heading-container {
-    min-height: 275px;
-    padding-top: 45px;
+    padding-top: 50px;
     align-self: flex-end;
+  }
+
+  main {
+    padding-bottom: 80px;
+  }
+  
+  .courses-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 30px 26px;
+  }
+
+  .courses-card-img {
+    left: 26px;
+  }
+
+  a.courses-card-link {
+    margin-top: auto;
   }
 
 }
 
 @media (min-width: 1440px) {
+
+  header,
+  main,
+  .hero-text,
+  footer {
+    padding: 24px 165px;
+  }
+
+  header h3 {
+    font: var(--text-heading-lg);
+    font-size: 36px;
+  }
+
+  button {
+    letter-spacing: 1px;
+  }
+
+  .button-sm {
+    width: 167px;
+    height: 56px;
+  }
+
+  .hero-container {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+
+  .hero-text {
+    flex-basis: 55%;
+  }
+
+  .hero-text h1 {
+    font: var(--text-heading-xl);
+  }
+
+  .text-default {
+    font: var(--text-body-md-thin);
+  }
+
+  .button-lg {
+    width: 167px;
+    height: 63px;
+    border-radius: 31.5px;
+  }
+
+  .hero-text button {
+    margin-top: 35px;
+  }
+
   .tablet-hero-img {
     display: none;
   }
 
+  .desktop-hero-img {
+    position: absolute;
+    clip-path: inset(0 335px 0 0);
+    display: block;
+    right: -335px;
+    top: -145px;
+    width: 1046px;
+  }
+
   main > * {
-    flex-basis: calc(33.3333% - 30px);
+    flex-basis: calc(33.3333% - 20px);
+    min-height: 320px;
+  }
+
+  main {
+    padding-bottom: 140px;
+  }
+
+  main > .courses-heading-container {
+    padding-top: 60px;
+  }
+
+  .courses-card {
+    margin-top: 80px;
+    padding: 40px 32px 32px 32px;
+  }
+
+  .courses-heading {
+    font: var(--text-heading-md);
+  }
+
+  .courses-card-heading {
+    font: var(--text-heading-sm);
+  }
+
+  .courses-card-img {
+    left: 32px;
+  }
+
+  footer h1 {
+    font: var(--text-heading-lg);
+    font-size: 36px;
   }
 
 }
